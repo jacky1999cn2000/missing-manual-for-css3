@@ -1,4 +1,4 @@
-# chapter 3
+# chapter 3 : SELECTORS: IDENTIFYING WHAT TO STYLE
 
 * descendants of a tag
 ```
