@@ -4,7 +4,7 @@
 ```
   li a
 ```  
-this will select all <a> tags that are descendants of <li> tag, not has to be direct descendants; so it can select `<li><a><a/></li>`, as well as `<li><strong><em><a><a/></em></strong></li>`
+this will select all <a> tags that are descendants of `<li>` tag, not has to be direct descendants; so it can select `<li><a><a/></li>`, as well as `<li><strong><em><a><a/></em></strong></li>`
 
 * Pseudo-Classes and Pseudo-Elements
   * Styles for Links
