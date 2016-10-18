@@ -31,9 +31,9 @@ this will select all <a> tags that are descendants of `<li>` tag, not has to be 
 
 * Child Selectors
   * Unlike a descendant selector, which applies to all descendants of a tag (children, grandchildren, and so on), the child selector lets you specify which child of which parent you mean. e.g. `body > h2`
-  * CSS also includes some very specific pseudo-classes for selecting child elements. They let you fine-tune your selectors for many di erent arrangements of HTML.
+  * CSS also includes some very specific pseudo-classes for selecting child elements. They let you fine-tune your selectors for many different arrangements of HTML.
     * :first-child pseudo-element lets you select and format just the first of however many children an element may have.
-    * `h1:first-child` This selector applies to *any <h1> tag that is a first child*.
+    * `h1:first-child` This selector applies to *any* `<h1>` *tag that is a first child*.
     * `li:last-child li:nth-child li:nth-child(odd) li:nth-child(even) li:nth-child(2) li:nth-child(3n) li:nth-child(3n+2)`
     * `p:only-child`
 
@@ -43,8 +43,8 @@ this will select all <a> tags that are descendants of `<li>` tag, not has to be 
   * ` img:nth-of-type(odd) { float: left; } img:nth-of-type(even) { float: right; }`
 
 * Siblings
-  * A tag that appears immediately after another tag in HTML is called an adjacent sibling. The adjacent sibling selector uses a plus sign (+) to join one element to the next. So to select every paragraph following each <h2> tag, use this selector: h2 + p (spaces are optional, so h2+p works as well). The last element in the selector (p, in this case) is what gets the formatting, but only when it’s directly after its brother <h2>.
-  * There’s another sibling selector called the general sibling combinatory selector (say that three times fast). It’s simply a ~ (tilde) and it means “select all siblings of this type.” For example, while h2 + p selects a single <p> tag that immediately follows an <h2> tag, h2 ~ p selects all <p> tags that are siblings (that is, on the same level) of the h2. To be honest, you may never find a good use for this selector, but CSS is nothing if not thorough.
+  * A tag that appears immediately after another tag in HTML is called an adjacent sibling. The adjacent sibling selector uses a plus sign (+) to join one element to the next. So to select every paragraph following each `<h2>` tag, use this selector: h2 + p (spaces are optional, so `h2+p` works as well). The last element in the selector (p, in this case) is what gets the formatting, but only when it’s directly after its brother `<h2>`.
+  * There’s another sibling selector called the general sibling combinatory selector (say that three times fast). It’s simply a ~ (tilde) and it means “select all siblings of this type.” For example, while h2 + p selects a single `<p>` tag that immediately follows an `<h2>` tag, h2 ~ p selects all `<p>` tags that are siblings (that is, on the same level) of the h2. To be honest, you may never find a good use for this selector, but CSS is nothing if not thorough.
 
 * The :target Selector
   ```
@@ -69,7 +69,7 @@ this will select all <a> tags that are descendants of `<li>` tag, not has to be 
   * The :not() Selector
     * `p:not(.classy) { color: blue; }   a[href^="http://"]:not([href^="http://mysite.com"])  a[href^="http://"]:not([href*="mysite.com"])`
     * limitations
-      * •You can only use simple selectors with the:not()selector.In other words you can use element selectors (like html or p), the universal selector (* [see page 49]), classes (.footer, for example), IDs (#banner, for example), or pseudo-classes (:hover, :checked, :first-child, and so on). So the following are all valid:
+      * You can only use simple selectors with the:not()selector.In other words you can use element selectors (like html or p), the universal selector (* [see page 49]), classes (.footer, for example), IDs (#banner, for example), or pseudo-classes (:hover, :checked, :first-child, and so on). So the following are all valid:
       ```
         .footnote:not(div)
         img:not(.portrait)
