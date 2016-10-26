@@ -24,7 +24,7 @@
 Instead of adding space between a tag and elements around it, a negative margin removes space.
 
   * Inline, Block, and Other Display Settings
-    * A block-level tag creates a break before and after it. The <p> tag, for example, creates a block that’s separated from tags above and below. Headlines, <div> tags, tables, lists, and list items are other examples of block-level tags.
+    * A block-level tag creates a break before and after it. The `<p>` tag, for example, creates a block that’s separated from tags above and below. Headlines, `<div>` tags, tables, lists, and list items are other examples of block-level tags.
 
     * Inline tags don’t create a break before or after them. They appear on the same line as the content and tags beside them.
 
@@ -126,7 +126,7 @@ You can also add a spread as a fourth value (between the shadow radius and shado
 
     * Redefining Box Width with Box-Sizing
 
-    When using percentages with multiple columns, you can run into some weird problems. Say you have two columns (really, two tags, such as <div> tags), and you want each to be 50 percent of the width of the window. So you set the two columns to a width of 50%; however, the moment you add padding or a border to one of the columns, you’ll increase its width to more than 50% (to be exact, it will be 50% plus the amount of left and right padding and the width of the left and right borders). In most cases, this will force the second column to drop below the first.
+    When using percentages with multiple columns, you can run into some weird problems. Say you have two columns (really, two tags, such as `<div>` tags), and you want each to be 50 percent of the width of the window. So you set the two columns to a width of 50%; however, the moment you add padding or a border to one of the columns, you’ll increase its width to more than 50% (to be exact, it will be 50% plus the amount of left and right padding and the width of the left and right borders). In most cases, this will force the second column to drop below the first.
 
     Fortunately, CSS o ers a property that lets you change how a browser calculates the screen width (and height) of an element. The box-sizing property provides three options:
     ```
@@ -169,9 +169,9 @@ You can also add a spread as a fourth value (between the shadow radius and shado
 
   Floated elements move to the left or right edge of their containing element. In some cases, this just means that the element moves to the left or right edge of the browser window. However, if you float an element that’s inside another tag with a set width or position on a web page, then the float will go to the left or right edge of that tag—the floated element’s “container.”
 
-  You can even use the float property with an inline element, such as the <img> tag. In fact, floating a photo to the left or right using CSS is a very common use of the float property. A web browser treats a floated inline element just like a block-level element, so you don’t run into the problems with padding and margin that normally trouble inline elements.
+  You can even use the float property with an inline element, such as the `<img>` tag. In fact, floating a photo to the left or right using CSS is a very common use of the float property. A web browser treats a floated inline element just like a block-level element, so you don’t run into the problems with padding and margin that normally trouble inline elements.
 
-  You can also float a block-level element like a headline or paragraph. A common technique is to float a <div> tag (or one of the HTML5 elements like <article>, <section>, or <aside>) containing other HTML tags and page content to create a kind of containing box. In this way, you can create sidebars, pull quotes, and other self-contained page elements. (You’ll see an example of this in this chapter’s tuto- rial.) When you float block-level elements, you should also set the width property for that element (in fact, CSS rules require setting the width for floated elements for all tags except images). This way, you can control how much horizontal space the block takes up and how much space is available for the content below it to move up and wrap around the block.
+  You can also float a block-level element like a headline or paragraph. A common technique is to float a `<div>` tag (or one of the HTML5 elements like `<article>`, `<section>`, or `<aside>`) containing other HTML tags and page content to create a kind of containing box. In this way, you can create sidebars, pull quotes, and other self-contained page elements. (You’ll see an example of this in this chapter’s tuto- rial.) When you float block-level elements, you should also set the width property for that element (in fact, CSS rules require setting the width for floated elements for all tags except images). This way, you can control how much horizontal space the block takes up and how much space is available for the content below it to move up and wrap around the block.
 
   * Backgrounds, Borders, and Floats
   To the frustration of many web designers, backgrounds and borders don’t react to floated elements the same way content does. Say you float an element—a sidebar for example—to the right. The content below the sidebar moves up and wraps around it, just as it should. But if that content has a background or border set on it, then that background or border actually appears underneath the floated sidebar (Figure 7-16, left). In essence, a web browser wraps the text around the float, but not the border or background. Believe it or not, this is absolutely kosher and (according to the rules) how it’s supposed to work. Of course, you may not want to follow these rules; you might want to have the border or background stop when it reaches the floated element (Figure 7-16, right). With a little CSS magic, you can do it.

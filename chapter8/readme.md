@@ -50,15 +50,17 @@ body {
     ```
 
     * Precise Values
+
     You can also position background images by using pixel values or ems. You use two values: one to indicate the distance between the image’s left edge and the container’s left edge, and another to specify the distance between the image’s top edge and the style’s top edge. (Put another way, the first value controls the horizontal position, and the second value controls the vertical position.)
 
-    Say you want custom bullets for a list. If you add a background image to the <li> tag, the bullets often don’t line up exactly (see Figure 8-8, top). So you can just nudge the bullets into place by using the background-position property. If the list would look better with, say, the bullets 5 pixels farther to the right and 8 pixels farther down, then add this declaration to the style defining the background image:
+    Say you want custom bullets for a list. If you add a background image to the `<li>` tag, the bullets often don’t line up exactly (see Figure 8-8, top). So you can just nudge the bullets into place by using the background-position property. If the list would look better with, say, the bullets 5 pixels farther to the right and 8 pixels farther down, then add this declaration to the style defining the background image:
     ` background-position: 5px 8px;`
     ![background2](./background2.png)
 
     * Percentage Values (probably not a good choice)
 
     * Fixing an Image in Place
+
       Normally, if there’s a background image on a web page and the visitor has to scroll down to see more of the page, the background image scrolls as well. As a result, any pattern in the background of the page appears to move along with the text. Furthermore, when you have a nonrepeating image in the background, it can po- tentially scroll o  the top of the page out of view. If you’ve placed the site’s logo or a watermark graphic in the background of the page, then you may not want it to disappear when visitors scroll.
 
       The CSS solution to such dilemmas is the background-attachment property. It has two options—scroll and fixed. Scroll is the normal web browser behavior; that is, it scrolls the background image along with the text and other page content. Fixed, however, keeps the image in place in the background (see Figure 8-10). So if you want to place your company’s logo in the upper-left corner of the web page, and keep it there even if the viewer scrolls, then you can create a style like this:
@@ -155,6 +157,7 @@ background: url(scrollTop.jpg) center top no-repeat,
 ![background6](./background6.png)
 
   * Repeating Linear Gradients
+
   Normally, a linear gradient fills the entire element with the first color at one point and the last color at the opposite edge of the element. However, it’s possible to create repeating gradients so you can create gradient patterns. In essence, you define a gradient with specified color stops; the browser draws the gradient, and then repeats that pattern, tiling it in the background of the element. For example, to get the repeating gradient of the left image in Figure 8-17 you can write this code:
 
   `background-image: repeating-linear-gradient(45deg, #900 20px, #FC0 30px, #900 40px)`
@@ -170,6 +173,7 @@ background: url(scrollTop.jpg) center top no-repeat,
   ![background7](./background7.png)
 
   * Radial Gradients
+
   CSS also provides a way of creating radial gradients—gradients that radiate outward in a circular or elliptical pattern (see Figure 8-18). The syntax is similar to linear gradients and at its most simple, you need only to provide a beginning color (the color at the middle of the gradient) and an ending color (the color at the end of the gradient). For example, the top-left image in Figure 8-18 is created with this code:
   ```
     background-image: radial-gradient(red, blue); (default to elliptical, center of the element)
@@ -188,6 +192,7 @@ background: url(scrollTop.jpg) center top no-repeat,
   `background-image: radial-gradient(circle at 20% 40%, red 20%, orange 80%, yellow);`
 
   * Repeating Radial Gradients
-  As with linear gradients, you can create radial gradients that repeat—perfect for that bull’s eye look, or when you wish to hypnotize your website visitors. You need to make sure you add either percentages or actual pixel or em values for the various color stops so the browser knows the size of a single radial gradient and can then repeat it. For example:
   
+  As with linear gradients, you can create radial gradients that repeat—perfect for that bull’s eye look, or when you wish to hypnotize your website visitors. You need to make sure you add either percentages or actual pixel or em values for the various color stops so the browser knows the size of a single radial gradient and can then repeat it. For example:
+
   `background-image: repeating-radial-gradient(circle, red 20px, orange 30px, yellow 40px, red 50px);`
