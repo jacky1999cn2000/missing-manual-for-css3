@@ -107,6 +107,7 @@ One strange feature of CSS transforms is that they don’t affect other elements
   The order doesn’t really matter unless you’re using translate. Since translate actually moves the element, if you place it before a rotate, for example, the browser first moves the element and then rotates it. Since the element moved first, the point around which it rotates has changed. On the other hand, if you rotate it first, you’re then moving the rotated element a certain amount from its center (which is now in a new location).
 
   * Origin
+
   Normally, when you apply a transformation to an element, the web browser uses the center of the element as the transformation point. For example, when you rotate an element, the browser rotates it around its center point (Figure 10-7, left). However, CSS lets you change that transformation point, using the transform-origin property. It works just like the background-position property (page 236); you can supply keyword values, absolute values in pixels, and relative values in ems and percentages.
 
   For example, to rotate a div around its top-left point (Figure 10-7, middle),  you can use the left and top keywords, like this: `transform-origin: left top;` `transform-origin: 0 0;` `transform-origin: 0% 0%;`
@@ -278,7 +279,7 @@ There are two steps in creating an animation:
      }
  ```
 
- You can also get pretty tricky with the percentage values by adding multiple percent- age values for one set of CSS properties. This is useful in a couple of cases: First, it’s good if you want to animate to a certain point, pause, and then continue. For example, say you’d like to begin with a yellow background color for a <div> tag. Then you’d like to change that color to blue, stay at blue for a while, and then finish with a red color. In other words, you want a sort of pause in the middle while the background color stays constant before changing again. You can do that with this code:
+ You can also get pretty tricky with the percentage values by adding multiple percentage values for one set of CSS properties. This is useful in a couple of cases: First, it’s good if you want to animate to a certain point, pause, and then continue. For example, say you’d like to begin with a yellow background color for a `<div>` tag. Then you’d like to change that color to blue, stay at blue for a while, and then finish with a red color. In other words, you want a sort of pause in the middle while the background color stays constant before changing again. You can do that with this code:
  ```
   @keyframes glow {
       from {
@@ -293,7 +294,7 @@ There are two steps in creating an animation:
   }
  ```
 
- You can also use percentages when you want to use the same set of CSS proper- ties for di erent parts of the animation. For example, say you want to animate the background color again, but this time go from yellow to blue to orange to blue to orange to red. Blue and orange appear twice, so instead of writing their background- color properties multiple times, you can instead do this:
+ You can also use percentages when you want to use the same set of CSS properties for different parts of the animation. For example, say you want to animate the background color again, but this time go from yellow to blue to orange to blue to orange to red. Blue and orange appear twice, so instead of writing their background- color properties multiple times, you can instead do this:
  ```
    @keyframes glow {
         from {
