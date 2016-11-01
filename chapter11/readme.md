@@ -136,3 +136,66 @@ Because tables are composed of several HTML tags, it helps to know which tag to 
     To highlight a column, you can use the background properties. Again, assume you have a <col> tag with a class of price applied to it: `.price { background-color: #F33; }`
 
     Keep in mind, however, that backgrounds for columns appear under table cells, so if you set a background color or image for `<td>` or `<th>` tags, the column’s background won’t be visible.
+
+    [About col and colgroup](http://www.w3schools.com/tags/tag_colgroup.asp)
+
+* Styling Forms
+
+  * HTML Form Elements
+
+  A variety of HTML tags help you build forms. You can format some of them (like text fields) more successfully than others (radio buttons). Here are a few common form tags and the types of properties they get along with:
+
+    * Fieldset
+
+    The `<fieldset>` tag groups related form questions. Most browsers do a good job of displaying background colors, background images, and borders for this tag. Padding places space from the edges of the fieldset to the content inside it.
+
+    * Legend
+
+    The `<legend>` tag follows the HTML for the `<fieldset>` tag and provides a label for the group of fields. The legend appears vertically centered on the top borderline of a fieldset. If the form elements for collecting a shipping address appear inside the fieldset, you might add a legend like this: `<legend>Shipping Address</legend>`. You can use CSS to change the <legend> tag’s font proper- ties, add background colors and images, and add your own borders.
+
+    * Textfields
+
+    The `<input type="text">,<input type="password">,and<textarea>` tags create text boxes on a form. These tags give you the most consistent cross-browser CSS control. You can change the font size, font family, color, and other text properties for text boxes, as well as add borders, background colors, and images. You can set the width and height of these fields using the CSS width and height properties.
+
+    * Buttons
+
+    Form buttons—like `<inputtype="submit">` — let your visitors submita form, reset its contents, or set o  some other action. Most browsers let you go wild with text formatting, borders, backgrounds, drop shadows, and rounded corners. You can also align the button’s text to the left, middle, or right using the text-align property. Linear gradients (page 252) look especially good on buttons.
+
+    * Drop-down menus
+
+    Drop-down menus created by the `<select>` tag also give you a fair amount of styling control. Most other browsers also let you set the font, font size, background color, image, and borders. However, backgrounds and background images aren’t always added to the drop-down menu when it expands to show all of the menu’s options.
+
+    ![t5](./t5.png)
+
+  * Laying Out Forms Using CSS
+
+    ![t6](./t6.png)
+
+    1. Wrap each label in a tag
+
+    The obvious choice for a tag is `<label>`, since it’s designed to identify form labels. But you can’t always use `<label>` tags for all labels. Radio buttons usually have a question like “What’s your favorite color?” followed by separate `<label>` tags for each button. So what tag do you use for the question? In this case, you must resort to wrapping the question in a `<span>` tag: `<span>What's your favorite color?</span>`. Then add a class to each of these tags — `<span class="label">` — and also add the class to just those `<label> `tags you want to appear in the left-hand column (in Figure 11-8, that would be the labels for “First name,” “Last name,” and so on, but not the `<label>` tags for the radio buttons).
+
+    2. Set the display property to inline-block,and set a width
+
+    Normally the `<label>` and `<span>` tags are inline elements, which ignore many of the settings available to block elements, including width, height, and text- align. However, if you make the label an inline-block, it can still sit next to (that’s the “inline” part) the form field. The width value should provide enough space to accommodate the entire label on one line if possible. You can create a class style that looks something like this:
+    ```
+    .label {
+      display: inline-block;
+      width: 20em;
+    }
+    ```
+    The width and inline-block settings turn the labels into little evenly sized blocks and provide a clean left edge to which all the form fields align.
+
+    3. Adjust the style
+
+    Just a couple more enhancements complete the job. You want to set the vertical-align property (page 360) to top, so the top of the label text aligns with the top of the form field. You also should align the label text to the right, so each label appears next to each form field. Finally, by adding a little bit of right margin, you can create a nice gutter of white space between the labels and form fields.
+    ```
+    .label {
+      float: left;
+      width: 20em;
+      vertical-align: top;
+      text-align: right;
+      margin-right; 15px;
+    }
+    ```
+    ![t7](./t7.png)
