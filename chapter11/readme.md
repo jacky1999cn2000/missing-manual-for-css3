@@ -188,7 +188,7 @@ Because tables are composed of several HTML tags, it helps to know which tag to 
 
     3. Adjust the style
 
-    Just a couple more enhancements complete the job. You want to set the vertical-align property (page 360) to top, so the top of the label text aligns with the top of the form field. You also should align the label text to the right, so each label appears next to each form field. Finally, by adding a little bit of right margin, you can create a nice gutter of white space between the labels and form fields.
+    Just a couple more enhancements complete the job. You want to set the vertical-align property (page 360) to top, so the top of the label text aligns with the top of the form field (vertical align setting makes sure the label text aligns with the top of the form fields next to them). You also should align the label text to the right, so each label appears next to each form field. Finally, by adding a little bit of right margin, you can create a nice gutter of white space between the labels and form fields.
     ```
     .label {
       float: left;
