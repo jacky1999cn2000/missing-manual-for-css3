@@ -1,6 +1,6 @@
 # chapter 17 : Modern Web Layout with Flexbox
 
-- Flexbox Basics
+* Flexbox Basics
 
 On the surface, flexbox is pretty simple. There are only two components you need to make it work:
 
@@ -8,7 +8,7 @@ On the surface, flexbox is pretty simple. There are only two components you need
 
 Any HTML element can be a flex container, but usually you'll use a `<div>` or some other structural HTML tag. The tag you use for the flex container will contain children and other tags that make up the second part of the flexbox model.
 
-1. Flex items
+2. Flex items
 
 Tags nested directly inside the flex container element are called flex items. Every direct child of the container element is automatically turned into a flex item. You can place any HTML tag inside the flex container. What's more, the child tags don't even have to be of the same type. For example, you could have one paragraph and four divs inside a flex container, and each of those will be a flex item.
 
